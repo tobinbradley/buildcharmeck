@@ -1,0 +1,65 @@
+/* imports */
+@import "../../bower_components/bootstrap/dist/css/bootstrap.css";
+@import "../../bower_components/font-awesome/css/font-awesome.css";
+@import "bootstrap-theme.css";
+
+/* variables */
+:root {
+--status-ongoing: #5cb85c;
+--status-tbd: #f0ad4e;
+--status-complete: #2aabd2;
+}
+
+
+
+.row-topmargin {
+    margin-top: 70px;
+}
+
+.chart-legend {
+    padding-top: 80px;
+    span {
+        //display: inline-block;
+        margin: 1em;
+        border-style: none;
+        border-width: 0 0 0 1em;
+        padding: 0 0.8em;
+        font-size: 0.8em;
+        //width: 20px;
+        //height: 20px;
+        vertical-align: center;
+    }
+    li {
+        margin: 8px;
+    }
+}
+
+#performance {
+    .complete {
+        color: var(--status-complete);
+    }
+    .ongoing {
+        color: var(--status-ongoing);
+    }
+    .tbd {
+        color: var(--status-tbd);
+    }
+    h3 {
+        margin: 10px 0 30px;
+    }
+    figure {
+        p {
+            font-style: italic;
+            font-size: 1.3em;
+        }
+        figcaption {
+            font-weight: bold;
+        }
+    }
+    .person {
+        border: 5px solid #e3e3e3;
+        position: absolute;
+        top: -35px;
+        right: -35px;
+    }
+}
