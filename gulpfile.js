@@ -1,9 +1,6 @@
 var     postcss = require('gulp-postcss'),
         gulp = require('gulp'),
         browserSync = require('browser-sync'),
-        autoprefixer = require('autoprefixer-core'),
-        csswring = require('csswring'),
-        atImport = require("postcss-import"),
         cssnext = require("cssnext"),
         concat = require("gulp-concat"),
         uglify = require("gulp-uglify"),
@@ -19,17 +16,22 @@ var jsFiles =  [
 
 
 // CSS
-gulp.task('css', function () {
+gulp.task("css", function() {
     var processors = [
-        atImport,
-        cssnext,
-        autoprefixer({browsers: ['last 2 version', 'safari 5', 'ie 9', 'ios 6', 'android 4']}),
-        csswring({map: true, removeAllComments: true})
+        cssnext({
+            'browers': ['last 2 version', 'safari 5', 'ie 9', 'ios 6', 'android 4'],
+            'customProperties': true,
+            'colorFunction': true,
+            'customSelectors': true,
+            'sourcemap': true,
+            'compress': false
+        })
     ];
     return gulp.src('./src/css/main.css')
         .pipe(postcss(processors))
         .pipe(gulp.dest('./dist/css'));
 });
+
 
 // JS
 gulp.task('js', function() {
