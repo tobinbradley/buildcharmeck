@@ -1,0 +1,47 @@
+.perf-stack {
+    display: inline-block;
+}
+.perf-stack span {
+    display: block;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.perf-measure {
+    font-weight: 700;
+}
+.perf-large .perf-measure {
+    font-size: 100px;
+    padding: 0 30px;
+    line-height: 100px;
+}
+.perf-ongoing {
+    color: var(--status-ongoing);
+}
+.perf-tbd {
+    color: var(--status-tbd);
+}
+.perf-complete {
+    color: var(--status-complete);
+}
+.perf-large .perf-slash img {
+    height: 140px;
+    position: relative;
+    top: -55px;
+}
+.perf-large .perf-slash {
+    width: 30px;
+}
+
+/* medium */
+.perf-medium .perf-measure {
+    font-size: 50px;
+    padding: 0 30px;
+    line-height: 50px;
+}
+.perf-medium .perf-slash img {
+    height: 80px;
+    position: relative;
+    top: -25px;
+}
+.perf-medium .perf-slash {
+    width: 10px;
+}
